@@ -398,13 +398,13 @@ msgstr ""
 
 #. module: my_recolecta
 #: model:ir.ui.menu,name:my_recolecta.recolecta_base_menu
-msgid "My recolecta"
-msgstr "Mi biblioteca"
+msgid "Recolections"
+msgstr "Recolectas"
 
 #. module: my_recolecta
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__name
-msgid "Name"
-msgstr "Nombre"
+msgid "Name of the product"
+msgstr "Nombre del producto"
 
 #. module: my_recolecta
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__comment
