@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "My Library",  # Module title
-    'summary': "Manage books easily",  # Module subtitle phrase
+    'name': "Seguimiento de recolecta",  # Module title
+    'summary': "Módulo para administrar la recolecta entrante",  # Module subtitle phrase
     'description': """
-Manage Library
+Manage recolecta
 ==============
-Description related to library.
+Description related to recolecta.
     """,  # Supports reStructuredText(RST) format
     'author': "Parth Gajjar",
     'website': "http://www.example.com",
@@ -16,8 +16,8 @@ Description related to library.
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
-        'views/library_book.xml',
-        'views/library_book_categ.xml',
+        'views/recolecta_book.xml',
+        'views/recolecta_book_categ.xml',
         'views/partner.xml',
         'reports/books_report.xml',
         # Si no carga demo data, este siempre carga
