@@ -4,19 +4,19 @@
         <!-- Defino el report -->
         <report
             id="report_books"
-            model="library.book.category"
+            model="recolecta.book.category"
             string="Books Report"
-            name="my_library.report_books_view"
-            file="my_library.report_books"
+            name="my_recolecta.report_books_view"
+            file="my_recolecta.report_books"
             report_type="qweb-html" />
 
         <!-- Lo mismo en PDF -->
         <report
             id="report_books_pdf"
-            model="library.book.category"
+            model="recolecta.book.category"
             string="Books Report (PDF)"
-            name="my_library.report_books_view"
-            file="my_library.report_books"
+            name="my_recolecta.report_books_view"
+            file="my_recolecta.report_books"
             report_type="qweb-pdf" />            
 
         <!-- Defino la plantilla para el report -->
