@@ -9,7 +9,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <page name="internal_notes" position="before">
-                <page name="library_books" string="Authored Books">
+                <page name="recolecta_books" string="Authored Books">
                 <group>
                     <field name="authored_book_ids"/>
                 </group>
