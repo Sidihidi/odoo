@@ -40,20 +40,20 @@ msgid ""
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__authored_book_ids
-#: model:ir.model.fields,field_description:my_recolecta.field_res_partner__authored_book_ids
-#: model:ir.model.fields,field_description:my_recolecta.field_res_users__authored_book_ids
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__authored_colecta_ids
+#: model:ir.model.fields,field_description:my_recolecta.field_res_partner__authored_colecta_ids
+#: model:ir.model.fields,field_description:my_recolecta.field_res_users__authored_colecta_ids
 #: model_terms:ir.ui.view,arch_db:my_recolecta.view_partner_author
-msgid "Authored Books"
+msgid "Authored colectas"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__author_ids
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__author_ids
 msgid "Authors"
 msgstr "Autores"
 
 #. module: my_recolecta
-#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_book__state__available
+#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_colecta__state__available
 msgid "Available"
 msgstr "Disponible"
 
@@ -63,29 +63,29 @@ msgid "Banks"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.actions.act_window,name:my_recolecta.recolecta_book_category_action
-#: model:ir.ui.menu,name:my_recolecta.recolecta_book_category_menu
-msgid "Book Categories"
+#: model:ir.actions.act_window,name:my_recolecta.recolecta_colecta_category_action
+#: model:ir.ui.menu,name:my_recolecta.recolecta_colecta_category_menu
+msgid "colecta Categories"
 msgstr "Categorías de libro"
 
 #. module: my_recolecta
-#: model:ir.ui.menu,name:my_recolecta.recolecta_book_menu
-msgid "Books"
+#: model:ir.ui.menu,name:my_recolecta.recolecta_colecta_menu
+msgid "colectas"
 msgstr "Libros"
 
 #. module: my_recolecta
-#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_book__state__borrowed
+#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_colecta__state__borrowed
 msgid "Borrowed"
 msgstr "Prestado"
 
 #. module: my_recolecta
-#: model:ir.ui.menu,name:my_recolecta.recolecta_book_menu_calendar
+#: model:ir.ui.menu,name:my_recolecta.recolecta_colecta_menu_calendar
 msgid "Calendar"
 msgstr "Calendario"
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__category_id
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__name
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__category_id
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__name
 msgid "Category"
 msgstr "Categoría"
 
@@ -100,7 +100,7 @@ msgid "Check this box if this contact is an Employee."
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__child_ids
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__child_ids
 msgid "Child Categories"
 msgstr "Categorías subordinadas"
 
@@ -156,20 +156,20 @@ msgid "Country"
 msgstr ""
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Create Categories"
 msgstr "Crear categorías"
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__create_uid
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__create_uid
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__create_uid
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__create_uid
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__create_date
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__create_date
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__create_date
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__create_date
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__create_date
 msgid "Created on"
 msgstr ""
@@ -190,13 +190,13 @@ msgid "Date of birth"
 msgstr "Fecha de nacimiento"
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__description
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__description
 msgid "Description"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__display_name
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__display_name
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__display_name
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__display_name
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__display_name
 msgid "Display Name"
 msgstr "Nombre a mostrar"
@@ -220,8 +220,8 @@ msgid "Employee"
 msgstr ""
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
-msgid "Find Book"
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
+msgid "Find colecta"
 msgstr "Buscar libro"
 
 #. module: my_recolecta
@@ -245,8 +245,8 @@ msgid "Geo Longitude"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__id
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__id
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__id
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__id
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__id
 msgid "ID"
 msgstr ""
@@ -304,22 +304,22 @@ msgid "Language"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book____last_update
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category____last_update
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta____last_update
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category____last_update
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__write_uid
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__write_uid
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__write_uid
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__write_uid
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__write_date
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__write_date
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__write_date
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__write_date
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__write_date
 msgid "Last Updated on"
 msgstr ""
@@ -330,14 +330,14 @@ msgid "Librarians"
 msgstr "Bibliotecarios"
 
 #. module: my_recolecta
-#: model:ir.model,name:my_recolecta.model_recolecta_book
-msgid "recolecta Book"
+#: model:ir.model,name:my_recolecta.model_recolecta_colecta
+msgid "recolecta colecta"
 msgstr "Libro de biblioteca"
 
 #. module: my_recolecta
-#: model:ir.actions.act_window,name:my_recolecta.recolecta_book_action
-#: model:ir.actions.act_window,name:my_recolecta.recolecta_book_calendar_action
-msgid "recolecta Books"
+#: model:ir.actions.act_window,name:my_recolecta.recolecta_colecta_action
+#: model:ir.actions.act_window,name:my_recolecta.recolecta_colecta_calendar_action
+msgid "recolecta colectas"
 msgstr "Libros de biblioteca"
 
 #. module: my_recolecta
@@ -346,32 +346,32 @@ msgid "recolecta member"
 msgstr "Usuario de biblioteca"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Log Members"
 msgstr "Guardar miembros"
 
 #. module: my_recolecta
-#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_book__state__lost
+#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_colecta__state__lost
 msgid "Lost"
 msgstr "Perdido"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_search
-msgid "Lost Books"
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_search
+msgid "Lost colectas"
 msgstr "Libros perdidos"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Make Available"
 msgstr "Establecer como disponible"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Make Borrowed"
 msgstr "Prestar"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Make Lost"
 msgstr "Establecer como perdido"
 
@@ -391,7 +391,7 @@ msgid "Mobile"
 msgstr ""
 
 #. module: my_recolecta
-#: code:addons/my_recolecta/models/recolecta_book.py:0
+#: code:addons/my_recolecta/models/recolecta_colecta.py:0
 #, python-format
 msgid "Moving from %s to %s is not allowd"
 msgstr ""
@@ -412,12 +412,12 @@ msgid "Notes"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__parent_id
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__parent_id
 msgid "Parent Category"
 msgstr "Categoría padre"
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book_category__parent_path
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta_category__parent_path
 msgid "Parent Path"
 msgstr ""
 
@@ -452,12 +452,12 @@ msgid "Related Company"
 msgstr ""
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_calendar
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_calendar
 msgid "Release Calendar"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__date_release
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__date_release
 msgid "Release Date"
 msgstr "Fecha de lanzamiento"
 
@@ -477,7 +477,7 @@ msgid "Share Partner"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__state
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__state
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__state_id
 msgid "State"
 msgstr ""
@@ -530,18 +530,18 @@ msgid "Timezone offset"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_book__name
+#: model:ir.model.fields,field_description:my_recolecta.field_recolecta_colecta__name
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__title
 msgid "Title"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_book__state__draft
+#: model:ir.model.fields.selection,name:my_recolecta.selection__recolecta_colecta__state__draft
 msgid "Unavailable"
 msgstr "No disponible"
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_form
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
 msgid "Update Date"
 msgstr "Actualiza fecha"
 
@@ -566,7 +566,7 @@ msgid ""
 msgstr ""
 
 #. module: my_recolecta
-#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_book_view_search
+#: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_search
 msgid "Without Authors"
 msgstr ""
 
@@ -576,6 +576,6 @@ msgid "Zip"
 msgstr ""
 
 #. module: my_recolecta
-#: model:ir.model,name:my_recolecta.model_recolecta_book_category
-msgid "recolecta.book.category"
+#: model:ir.model,name:my_recolecta.model_recolecta_colecta_category
+msgid "recolecta.colecta.category"
 msgstr ""

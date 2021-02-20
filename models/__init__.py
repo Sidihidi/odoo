@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
-from . import recolecta_book
-from . import recolecta_book_categ
+from . import recolecta_colecta
+from . import recolecta_colecta_categ

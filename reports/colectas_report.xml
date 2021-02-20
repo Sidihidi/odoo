@@ -3,24 +3,24 @@
 
         <!-- Defino el report -->
         <report
-            id="report_books"
-            model="recolecta.book.category"
-            string="Books Report"
-            name="my_recolecta.report_books_view"
-            file="my_recolecta.report_books"
+            id="report_colectas"
+            model="recolecta.colecta.category"
+            string="colectas Report"
+            name="my_recolecta.report_colectas_view"
+            file="my_recolecta.report_colectas"
             report_type="qweb-html" />
 
         <!-- Lo mismo en PDF -->
         <report
-            id="report_books_pdf"
-            model="recolecta.book.category"
-            string="Books Report (PDF)"
-            name="my_recolecta.report_books_view"
-            file="my_recolecta.report_books"
+            id="report_colectas_pdf"
+            model="recolecta.colecta.category"
+            string="colectas Report (PDF)"
+            name="my_recolecta.report_colectas_view"
+            file="my_recolecta.report_colectas"
             report_type="qweb-pdf" />            
 
         <!-- Defino la plantilla para el report -->
-        <template id="report_books_view">
+        <template id="report_colectas_view">
             <t t-call="web.html_container">
                 <!-- Para cada autor -->
                 <t t-foreach="docs" t-as="doc">
@@ -50,22 +50,22 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Books</th>
+                                                    <th>colectas</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr t-foreach="doc.book_ids" t-as="book">
-                                                    <td><span t-field="book.name"/></td>
+                                                <tr t-foreach="doc.colecta_ids" t-as="colecta">
+                                                    <td><span t-field="colecta.name"/></td>
                                                     <td>
                                                         <ul>
-                                                            <li t-foreach="book.author_ids" t-as="author">
+                                                            <li t-foreach="colecta.author_ids" t-as="author">
                                                                <span t-field="author.name"/>
                                                             </li>
                                                         </ul>
                                                     </td>
                                                     <td>
                                                         <!-- Ejemplo de if -->
-                                                        <t t-if="book.state == 'lost'">Not available</t>
+                                                        <t t-if="colecta.state == 'lost'">Not available</t>
                                                         <t t-else=""></t>
                                                     </td>
                                                 </tr>

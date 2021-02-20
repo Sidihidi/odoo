@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id='recolecta_book_action' model='ir.actions.act_window'>
-        <field name="name">recolecta Books</field>
-        <field name="res_model">recolecta.book</field>
+    <record id='recolecta_colecta_action' model='ir.actions.act_window'>
+        <field name="name">recolecta colectas</field>
+        <field name="res_model">recolecta.colecta</field>
         <field name="view_mode">kanban,tree,form,calendar</field>
     </record>
 
-    <record id='recolecta_book_calendar_action' model='ir.actions.act_window'>
-        <field name="name">recolecta Books</field>
-        <field name="res_model">recolecta.book</field>
+    <record id='recolecta_colecta_calendar_action' model='ir.actions.act_window'>
+        <field name="name">recolecta colectas</field>
+        <field name="res_model">recolecta.colecta</field>
         <field name="view_mode">calendar</field>
     </record>
 
 
     <menuitem name="My recolecta" id="recolecta_base_menu" />
-    <menuitem name="Books" id="recolecta_book_menu" parent="recolecta_base_menu" action="recolecta_book_action"/>
-    <menuitem name="Calendar" id="recolecta_book_menu_calendar" parent="recolecta_base_menu" action="recolecta_book_calendar_action"/>
+    <menuitem name="colectas" id="recolecta_colecta_menu" parent="recolecta_base_menu" action="recolecta_colecta_action"/>
+    <menuitem name="Calendar" id="recolecta_colecta_menu_calendar" parent="recolecta_base_menu" action="recolecta_colecta_calendar_action"/>
 
     <!-- Calendar View -->
-    <record id="recolecta_book_view_calendar" model="ir.ui.view">
-        <field name="name">recolecta Book Calendar</field>
-        <field name="model">recolecta.book</field>
+    <record id="recolecta_colecta_view_calendar" model="ir.ui.view">
+        <field name="name">recolecta colecta Calendar</field>
+        <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <calendar string="Release Calendar" date_start="date_release" mode="month">
                 <field name="name"/>
@@ -30,9 +30,9 @@
     </record>
 
     <!-- Kanban View -->
-    <record id="recolecta_book_rent_view_kanban" model="ir.ui.view">
-        <field name="name">Book Kanban</field>
-        <field name="model">recolecta.book</field>
+    <record id="recolecta_colecta_rent_view_kanban" model="ir.ui.view">
+        <field name="name">colecta Kanban</field>
+        <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <kanban default_group_by="state">
                 <field name="state" />
@@ -48,7 +48,7 @@
                                         </b>
                                     </div>
                                     <div class="text-muted">
-                                        <i class="fa fa-book"/>
+                                        <i class="fa fa-colecta"/>
                                         <field name="name" />
                                     </div>
                                 </div>
@@ -61,9 +61,9 @@
     </record>    
 
     <!-- Form View -->
-    <record id="recolecta_book_view_form" model="ir.ui.view">
-        <field name="name">recolecta Book Form</field>
-        <field name="model">recolecta.book</field>
+    <record id="recolecta_colecta_view_form" model="ir.ui.view">
+        <field name="name">recolecta colecta Form</field>
+        <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -73,7 +73,7 @@
                     <button name="log_all_recolecta_members"  string="Log Members" type="object"/>
                     <button name="create_categories" string="Create Categories" type="object"/>
                     <button name="change_release_date" string="Update Date" type="object"/>
-                    <button name="find_book" string="Find Book" type="object"/>
+                    <button name="find_colecta" string="Find colecta" type="object"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <group>
@@ -91,9 +91,9 @@
     </record>
 
     <!-- Tree(list) View -->
-    <record id="recolecta_book_view_tree" model="ir.ui.view">
-        <field name="name">recolecta Book List</field>
-        <field name="model">recolecta.book</field>
+    <record id="recolecta_colecta_view_tree" model="ir.ui.view">
+        <field name="name">recolecta colecta List</field>
+        <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -103,15 +103,15 @@
     </record>
 
     <!-- Search View -->
-    <record id="recolecta_book_view_search" model="ir.ui.view">
-        <field name="name">recolecta Book Search</field>
-        <field name="model">recolecta.book</field>
+    <record id="recolecta_colecta_view_search" model="ir.ui.view">
+        <field name="name">recolecta colecta Search</field>
+        <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
                 <field name="author_ids"/>
                 <filter string="Without Authors" name="without_author" domain="[('author_ids','=',False)]"/>
-                <filter string="Lost Books" name="without_author" domain="[('state','=','Lost')]"/>
+                <filter string="Lost colectas" name="without_author" domain="[('state','=','Lost')]"/>
             </search>
         </field>
     </record>

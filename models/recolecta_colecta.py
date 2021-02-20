@@ -8,14 +8,14 @@ from odoo.tools.translate import _
 logger = logging.getLogger(__name__)
 
 
-class recolectaBook(models.Model):
-    _name = 'recolecta.book'
-    _description = 'recolecta Book'
+class recolectacolecta(models.Model):
+    _name = 'recolecta.colecta'
+    _description = 'recolecta colecta'
 
     name = fields.Char('Title', required=True)
     date_release = fields.Date('Release Date')
     author_ids = fields.Many2many('res.partner', string='Authors')
-    category_id = fields.Many2one('recolecta.book.category', string='Category')
+    category_id = fields.Many2one('recolecta.colecta.category', string='Category')
 
     state = fields.Selection([
         ('draft', 'Unavailable'),
@@ -35,11 +35,11 @@ class recolectaBook(models.Model):
         return (old_state, new_state) in allowed
 
     def change_state(self, new_state):
-        for book in self:
-            if book.is_allowed_transition(book.state, new_state):
-                book.state = new_state
+        for colecta in self:
+            if colecta.is_allowed_transition(colecta.state, new_state):
+                colecta.state = new_state
             else:
-                message = _('Moving from %s to %s is not allowd') % (book.state, new_state)
+                message = _('Moving from %s to %s is not allowd') % (colecta.state, new_state)
                 raise UserError(message)
 
     def make_available(self):
@@ -75,24 +75,24 @@ class recolectaBook(models.Model):
                 (0, 0, categ2),
             ]
         }
-        # Total 3 records (1 parent and 2 child) will be craeted in recolecta.book.category model
-        record = self.env['recolecta.book.category'].create(parent_category_val)
+        # Total 3 records (1 parent and 2 child) will be craeted in recolecta.colecta.category model
+        record = self.env['recolecta.colecta.category'].create(parent_category_val)
         return True
 
     def change_release_date(self):
         self.ensure_one()
         self.date_release = fields.Date.today()
 
-    def find_book(self):
+    def find_colecta(self):
         domain = [
             '|',
-                '&', ('name', 'ilike', 'Book Name'),
+                '&', ('name', 'ilike', 'colecta Name'),
                      ('category_id.name', '=', 'Category Name'),
-                '&', ('name', 'ilike', 'Book Name 2'),
+                '&', ('name', 'ilike', 'colecta Name 2'),
                      ('category_id.name', '=', 'Category Name 2')
         ]
-        books = self.search(domain)
-        logger.info('Books found: %s', books)
+        colectas = self.search(domain)
+        logger.info('colectas found: %s', colectas)
         return True
 
 class recolectaMember(models.Model):
@@ -110,8 +110,8 @@ class recolectaMember(models.Model):
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    authored_book_ids = fields.Many2many(
-        'recolecta.book',
-        string='Authored Books',
-        # relation='recolecta_book_res_partner_rel'  # optional
+    authored_colecta_ids = fields.Many2many(
+        'recolecta.colecta',
+        string='Authored colectas',
+        # relation='recolecta_colecta_res_partner_rel'  # optional
     )

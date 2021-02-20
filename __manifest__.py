@@ -16,10 +16,10 @@ Description related to recolecta.
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
-        'views/recolecta_book.xml',
-        'views/recolecta_book_categ.xml',
+        'views/recolecta_colecta.xml',
+        'views/recolecta_colecta_categ.xml',
         'views/partner.xml',
-        'reports/books_report.xml',
+        'reports/colectas_report.xml',
         # Si no carga demo data, este siempre carga
         #'demo/demo.xml',              
     ],

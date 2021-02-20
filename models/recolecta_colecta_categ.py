@@ -3,8 +3,8 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 
-class BookCategory(models.Model):
-    _name = 'recolecta.book.category'
+class colectaCategory(models.Model):
+    _name = 'recolecta.colecta.category'
 
     _parent_store = True
     _parent_name = "parent_id"  # optional if field is 'parent_id'
@@ -12,17 +12,17 @@ class BookCategory(models.Model):
     name = fields.Char('Category')
     description = fields.Text('Description')
     parent_id = fields.Many2one(
-        'recolecta.book.category',
+        'recolecta.colecta.category',
         string='Parent Category',
         ondelete='restrict',
         index=True
     )
     child_ids = fields.One2many(
-        'recolecta.book.category', 'parent_id',
+        'recolecta.colecta.category', 'parent_id',
         string='Child Categories')
     parent_path = fields.Char(index=True)
 
-    book_ids = fields.One2many('recolecta.book', 'category_id', 'Books')
+    colecta_ids = fields.One2many('recolecta.colecta', 'category_id', 'colectas')
 
     @api.constrains('parent_id')
     def _check_hierarchy(self):
