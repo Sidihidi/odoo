@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <!--Authors -->
+
+        <record id="author_neal_stephenson" model="res.partner">
+            <field name="name">Neal Stephenson</field>
+        </record>
+
+        <record id="author_jrr_tolkien" model="res.partner">
+            <field name="name">J. R. R. Tolkien</field>
+        </record>        
+
+        <!-- Book Categories -->
+
+        <record id="category_assay" model="library.book.category">
+            <field name="name">Assay</field>
+            <field name="description">Not fiction</field>
+        </record>
+
+        <record id="category_fantasy" model="library.book.category">
+            <field name="name">Fantasy</field>
+            <field name="description">Fiction</field>
+        </record>        
+
+        <!-- Books -->
+
+        <record id="book_cmd" model="library.book">
+            <field name="name">In the beginning was the command line</field>
+            <field name="state">available</field>
+            <field name="date_release">2021-01-01</field>
+            <field name="category_id" ref="category_assay"/>
+            <field name="author_ids" eval="[(6, 0, [ ref('author_neal_stephenson'), ])]"/>
+        </record>
+
+        <record id="book_ring" model="library.book">
+            <field name="name">The lord of the rings</field>
+            <field name="state">lost</field>
+            <field name="date_release">2021-01-02</field>
+            <field name="category_id" ref="category_fantasy"/>
+            <field name="author_ids" eval="[(6, 0, [ ref('author_jrr_tolkien'), ])]"/>
+        </record>
+
+    </data>
+</odoo>

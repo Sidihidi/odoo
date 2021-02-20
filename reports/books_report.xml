@@ -1,0 +1,83 @@
+<odoo>
+    <data>
+
+        <!-- Defino el report -->
+        <report
+            id="report_books"
+            model="library.book.category"
+            string="Books Report"
+            name="my_library.report_books_view"
+            file="my_library.report_books"
+            report_type="qweb-html" />
+
+        <!-- Lo mismo en PDF -->
+        <report
+            id="report_books_pdf"
+            model="library.book.category"
+            string="Books Report (PDF)"
+            name="my_library.report_books_view"
+            file="my_library.report_books"
+            report_type="qweb-pdf" />            
+
+        <!-- Defino la plantilla para el report -->
+        <template id="report_books_view">
+            <t t-call="web.html_container">
+                <!-- Para cada autor -->
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="container-fluid">
+                                <h2 class="text-center mt32">
+                                    Category:
+                                    <span t-field="doc.name"/>
+                                </h2>
+                                <div class="row mt32 mb32">
+                                    <div class="col-7">
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="text-right">
+                                        Description:</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="text-right">
+                                            <span t-field="doc.description"/>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row mt32 mb32 border p-2">
+                                    <div class="col-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Books</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr t-foreach="doc.book_ids" t-as="book">
+                                                    <td><span t-field="book.name"/></td>
+                                                    <td>
+                                                        <ul>
+                                                            <li t-foreach="book.author_ids" t-as="author">
+                                                               <span t-field="author.name"/>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <!-- Ejemplo de if -->
+                                                        <t t-if="book.state == 'lost'">Not available</t>
+                                                        <t t-else=""></t>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

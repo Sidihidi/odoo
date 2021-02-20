@@ -19,9 +19,14 @@ Description related to library.
         'views/library_book.xml',
         'views/library_book_categ.xml',
         'views/partner.xml',
+        'reports/books_report.xml',
+        # Si no carga demo data, este siempre carga
+        #'demo/demo.xml',              
     ],
     # This demo data files will be loaded if db initialize with demo data (commented becaues file is not added in this example)
-    # 'demo': [
-    #     'demo.xml'
-    # ],
+    'demo': [
+        'demo/demo.xml',
+    ],
+    'installable': True,
+    'application': True,    
 }
