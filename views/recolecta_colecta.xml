@@ -2,25 +2,25 @@
 <odoo>
 
     <record id='recolecta_colecta_action' model='ir.actions.act_window'>
-        <field name="name">recolecta colectas</field>
+        <field name="name">Recolectas</field>
         <field name="res_model">recolecta.colecta</field>
         <field name="view_mode">kanban,tree,form,calendar</field>
     </record>
 
     <record id='recolecta_colecta_calendar_action' model='ir.actions.act_window'>
-        <field name="name">recolecta colectas</field>
+        <field name="name">Colectas</field>
         <field name="res_model">recolecta.colecta</field>
         <field name="view_mode">calendar</field>
     </record>
 
 
-    <menuitem name="My recolecta" id="recolecta_base_menu" />
-    <menuitem name="colectas" id="recolecta_colecta_menu" parent="recolecta_base_menu" action="recolecta_colecta_action"/>
+    <menuitem name="Recolectas" id="recolecta_base_menu" />
+    <menuitem name="Colectas" id="recolecta_colecta_menu" parent="recolecta_base_menu" action="recolecta_colecta_action"/>
     <menuitem name="Calendar" id="recolecta_colecta_menu_calendar" parent="recolecta_base_menu" action="recolecta_colecta_calendar_action"/>
 
     <!-- Calendar View -->
     <record id="recolecta_colecta_view_calendar" model="ir.ui.view">
-        <field name="name">recolecta colecta Calendar</field>
+        <field name="name">Colecta Calendar</field>
         <field name="model">recolecta.colecta</field>
         <field name="arch" type="xml">
             <calendar string="Release Calendar" date_start="date_release" mode="month">
