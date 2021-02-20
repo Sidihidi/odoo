@@ -219,7 +219,7 @@ msgstr ""
 
 #. module: my_recolecta
 #: model_terms:ir.ui.view,arch_db:my_recolecta.recolecta_colecta_view_form
-msgid "Find colecta"
+msgid "Encontrar una colecta"
 msgstr ""
 
 #. module: my_recolecta
@@ -329,13 +329,13 @@ msgstr ""
 
 #. module: my_recolecta
 #: model:ir.model,name:my_recolecta.model_recolecta_colecta
-msgid "recolecta colecta"
+msgid "Colecta"
 msgstr ""
 
 #. module: my_recolecta
 #: model:ir.actions.act_window,name:my_recolecta.recolecta_colecta_action
 #: model:ir.actions.act_window,name:my_recolecta.recolecta_colecta_calendar_action
-msgid "recolecta colectas"
+msgid "Colectas"
 msgstr ""
 
 #. module: my_recolecta
@@ -396,8 +396,8 @@ msgstr ""
 
 #. module: my_recolecta
 #: model:ir.ui.menu,name:my_recolecta.recolecta_base_menu
-msgid "My recolecta"
-msgstr ""
+msgid "My recolection"
+msgstr "Mi recolección"
 
 #. module: my_recolecta
 #: model:ir.model.fields,field_description:my_recolecta.field_recolecta_member__name

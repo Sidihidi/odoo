@@ -13,19 +13,19 @@
 
         <!-- colecta Categories -->
 
-        <record id="category_assay" model="library.colecta.category">
+        <record id="category_assay" model="recolecta.colecta.category">
             <field name="name">Assay</field>
             <field name="description">Not fiction</field>
         </record>
 
-        <record id="category_fantasy" model="library.colecta.category">
+        <record id="category_fantasy" model="recolecta.colecta.category">
             <field name="name">Fantasy</field>
             <field name="description">Fiction</field>
         </record>        
 
         <!-- colectas -->
 
-        <record id="colecta_cmd" model="library.colecta">
+        <record id="colecta_cmd" model="recolecta.colecta">
             <field name="name">In the beginning was the command line</field>
             <field name="state">available</field>
             <field name="date_release">2021-01-01</field>
@@ -33,7 +33,7 @@
             <field name="author_ids" eval="[(6, 0, [ ref('author_neal_stephenson'), ])]"/>
         </record>
 
-        <record id="colecta_ring" model="library.colecta">
+        <record id="colecta_ring" model="recolecta.colecta">
             <field name="name">The lord of the rings</field>
             <field name="state">lost</field>
             <field name="date_release">2021-01-02</field>
